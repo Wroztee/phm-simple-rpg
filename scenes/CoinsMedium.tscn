@@ -5,5 +5,5 @@
 [node name="CoinsMedium" instance=ExtResource( 1 )]
 value = 25
 
-[node name="Sprite" parent="." index="0"]
+[node name="Sprite2D" parent="." index="0"]
 region_rect = Rect2( 714, 187, 16, 16 )

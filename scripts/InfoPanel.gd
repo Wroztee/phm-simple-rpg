@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 
-export(String) var message = ""
+@export var message: String = ""
 
 
 func _ready():

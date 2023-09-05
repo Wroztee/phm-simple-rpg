@@ -1,7 +1,7 @@
 extends Area2D
 
 
-export(float) var speed = 4
+@export var speed: float = 4
 
 const TILE_SIZE = 16
 
@@ -37,7 +37,7 @@ func _unhandled_input(event):
 				$MoveTimer.start()
 		
 func move_tile(direction: Vector2):
-	$RayCast2D.cast_to = direction * TILE_SIZE
+	$RayCast2D.target_position = direction * TILE_SIZE
 	$RayCast2D.force_raycast_update()
 	if !$RayCast2D.is_colliding():
 		position += direction * TILE_SIZE

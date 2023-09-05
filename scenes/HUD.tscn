@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/HUD.gd" type="Script" id=1]
-[ext_resource path="res://fonts/kenvector_future.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/kenvector_future.ttf" type="FontFile" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 0.105882, 0.105882, 1 )
@@ -27,7 +27,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="FontFile" id=3]
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
@@ -43,24 +43,24 @@ anchor_bottom = 1.0
 [node name="HealthBar" type="ProgressBar" parent="Control"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -208.0
-margin_top = 16.0
-margin_right = -16.0
-margin_bottom = 34.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_styles/fg = SubResource( 1 )
-custom_styles/bg = SubResource( 2 )
+offset_left = -208.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_styles/fg = SubResource( 1 )
+theme_override_styles/bg = SubResource( 2 )
 value = 100.0
 percent_visible = false
 
 [node name="Coins" type="Label" parent="Control"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -56.0
-margin_top = 48.0
-margin_right = -16.0
-margin_bottom = 62.0
-custom_fonts/font = SubResource( 3 )
+offset_left = -56.0
+offset_top = 48.0
+offset_right = -16.0
+offset_bottom = 62.0
+theme_override_fonts/font = SubResource( 3 )
 text = "0"
 align = 2
 valign = 1

@@ -1,7 +1,7 @@
 extends Area2D
 
 
-export(int) var value = 5
+@export var value: int = 5
 
 
 func _on_Coins_area_entered(area):
