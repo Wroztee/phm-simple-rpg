@@ -10,7 +10,9 @@ func _ready():
 	if target_path != null:
 		target = get_node(target_path)
 		position = target.position
+		
+		target.moved.connect(move_to_position)
 
-func _process(delta):
+func move_to_position():
 	if target != null:
 		position = target.position

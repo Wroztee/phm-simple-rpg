@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" path="res://scenes/Camera.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/Teleport.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://scenes/Cactus.tscn" id="5"]
-[ext_resource type="PackedScene" path="res://scenes/InfoPanel.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://bmdeddq4vad76" path="res://scenes/InfoPanel.tscn" id="6"]
 [ext_resource type="PackedScene" path="res://scenes/CoinsSmall.tscn" id="7"]
 [ext_resource type="PackedScene" path="res://scenes/CoinsMedium.tscn" id="8"]
 [ext_resource type="PackedScene" path="res://scenes/CoinsLarge.tscn" id="9"]
@@ -14,7 +14,8 @@
 
 [node name="Environment" type="Node2D" parent="."]
 
-[node name="Ground" type="TileMap" parent="Environment"]
+[node name="TileMap" type="TileMap" parent="Environment"]
+z_index = -6
 tile_set = ExtResource("1")
 format = 2
 layer_0/name = "grnd"
@@ -52,6 +53,7 @@ layer_4/tile_data = PackedInt32Array()
 position = Vector2(472, 384)
 
 [node name="Cacti" type="Node2D" parent="Environment"]
+z_index = 4
 
 [node name="Cactus" parent="Environment/Cacti" instance=ExtResource("5")]
 position = Vector2(744, 424)
