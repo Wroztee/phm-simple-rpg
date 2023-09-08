@@ -108,7 +108,7 @@ position = Vector2(605, 373)
 [node name="Camera2D" parent="." instance=ExtResource("3")]
 position = Vector2(605, 372)
 zoom = Vector2(4, 4)
-target_path = NodePath("../Player")
+script = null
 
 [connection signal="body_entered" from="Environment/Coins/CoinsMedium" to="Environment/Coins/CoinsMedium" method="_on_Coins_body_entered"]
 [connection signal="body_entered" from="Environment/Coins/CoinsMedium2" to="Environment/Coins/CoinsMedium2" method="_on_Coins_body_entered"]

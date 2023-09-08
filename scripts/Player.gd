@@ -18,8 +18,6 @@ var last_action = ""
 
 
 func _ready():
-	# show only the HUD for the initial state of the project
-	HUD.show_hud()
 	# align position to the middle of a tile
 	position.x = int(position.x / TILE_SIZE) * TILE_SIZE
 	position.y = int(position.y / TILE_SIZE) * TILE_SIZE
@@ -36,7 +34,7 @@ func _unhandled_input(event):
 				last_action = action
 				last_dir = dir
 				$MoveTimer.start()
-		
+
 func move_tile(direction: Vector2):
 	$RayCast2D.target_position = direction * TILE_SIZE
 	$RayCast2D.force_raycast_update()
@@ -54,12 +52,9 @@ func _on_MoveTimer_timeout():
 	last_action = ""
 	last_dir = Vector2.ZERO
 	$MoveTimer.stop()
-	
+
 func get_hurt(value):
 	PlayerState.decrease_health(value)
 
 func collect_coins(value):
 	PlayerState.add_coins(value)
-
-
-

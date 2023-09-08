@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" path="res://scenes/CoinsMedium.tscn" id="6_bqt5q"]
 [ext_resource type="PackedScene" path="res://scenes/CoinsSmall.tscn" id="7_wawhe"]
 [ext_resource type="PackedScene" path="res://scenes/House.tscn" id="8_yjjt0"]
-[ext_resource type="PackedScene" path="res://scenes/InfoPanel.tscn" id="9_i5ppm"]
+[ext_resource type="PackedScene" uid="uid://bmdeddq4vad76" path="res://scenes/InfoPanel.tscn" id="9_i5ppm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fcxnm"]
 resource_name = "Full Tileset"
