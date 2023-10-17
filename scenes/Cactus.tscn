@@ -14,5 +14,3 @@ shape = SubResource("1")
 texture = ExtResource("1")
 region_enabled = true
 region_rect = Rect2(374, 153, 16, 16)
-
-[connection signal="area_entered" from="." to="." method="_on_Cactus_area_entered"]
