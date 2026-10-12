@@ -3,16 +3,19 @@ extends StaticBody2D
 
 @export var message: String = ""
 
+@onready var message_label: Label = $CanvasLayer/TextureRect/Label
+@onready var info_panel: TextureRect = $CanvasLayer/TextureRect
 
-func _ready():
-	$CanvasLayer/TextureRect/Label.text = message
-	$CanvasLayer/TextureRect.hide()
 
-func _on_CloseArea_area_entered(area):
+func _ready() -> void:
+	message_label.text = message
+	info_panel.hide()
+
+func _on_close_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):
-		$CanvasLayer/TextureRect.show()
+		info_panel.show()
 
 
-func _on_CloseArea_area_exited(area):
+func _on_close_area_area_exited(area: Area2D) -> void:
 	if area.is_in_group("Player"):
-		$CanvasLayer/TextureRect.hide()
+		info_panel.hide()

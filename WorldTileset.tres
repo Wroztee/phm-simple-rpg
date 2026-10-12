@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://wims2spvuw0l"]
+[gd_resource type="TileSet" format=3 uid="uid://wims2spvuw0l"]
 
 [ext_resource type="Texture2D" uid="uid://cwgsnyy8ditkf" path="res://sprites/pack/roguelikeSheet_transparent.png" id="1"]
 

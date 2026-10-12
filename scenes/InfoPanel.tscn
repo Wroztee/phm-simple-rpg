@@ -67,5 +67,5 @@ theme_override_fonts/font = SubResource("3")
 text = "Press SPACE to enter the house."
 autowrap_mode = 2
 
-[connection signal="area_entered" from="CloseArea" to="." method="_on_CloseArea_area_entered"]
-[connection signal="area_exited" from="CloseArea" to="." method="_on_CloseArea_area_exited"]
+[connection signal="area_entered" from="CloseArea" to="." method="_on_close_area_area_entered"]
+[connection signal="area_exited" from="CloseArea" to="." method="_on_close_area_area_exited"]

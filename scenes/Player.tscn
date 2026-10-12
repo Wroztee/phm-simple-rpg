@@ -1,28 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnly8rx3dgsy4"]
+[gd_scene format=3 uid="uid://cnly8rx3dgsy4"]
 
 [ext_resource type="Texture2D" uid="uid://dlo360g163kto" path="res://sprites/characters/roguelikeChar_transparent.png" id="1"]
-[ext_resource type="Script" path="res://scripts/Player.gd" id="2"]
+[ext_resource type="Script" uid="uid://d3tjgytaddffe" path="res://scripts/Player.gd" id="2"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 1.0
 height = 2.0
 
-[node name="Player" type="Area2D" groups=["Player"]]
+[node name="Player" type="Area2D" unique_id=511690702 groups=["Player"]]
 script = ExtResource("2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2094898423]
 texture = ExtResource("1")
 region_enabled = true
 region_rect = Rect2(17, 154, 16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1214421332]
 rotation = 1.5708
 shape = SubResource("1")
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=256142622]
 target_position = Vector2(0, 16)
 
-[node name="MoveTimer" type="Timer" parent="."]
+[node name="MoveTimer" type="Timer" parent="." unique_id=754085469]
 wait_time = 0.2
 
-[connection signal="timeout" from="MoveTimer" to="." method="_on_MoveTimer_timeout"]
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]

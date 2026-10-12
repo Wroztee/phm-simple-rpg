@@ -35,5 +35,5 @@ offset_top = -75.0
 theme_override_fonts/font = SubResource("2")
 text = "Press SPACE to enter."
 
-[connection signal="area_entered" from="." to="." method="_on_Teleport_area_entered"]
-[connection signal="area_exited" from="." to="." method="_on_Teleport_area_exited"]
+[connection signal="area_entered" from="." to="." method="_on_teleport_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_teleport_area_exited"]
