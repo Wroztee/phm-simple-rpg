@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bmd8675l1kdou"]
+
+[ext_resource type="Texture2D" uid="uid://cwgsnyy8ditkf" path="res://sprites/pack/roguelikeSheet_transparent.png" id="1"]
+
+[sub_resource type="CircleShape2D" id="1"]
+radius = 7.0
+
+[node name="Coin" type="Area2D" unique_id=1644370911]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=64950503]
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(697, 188, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=19741011]
+shape = SubResource("1")

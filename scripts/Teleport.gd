@@ -1,7 +1,6 @@
 extends Area2D
 
-
-@export var next_scene: String = "res://scenes/House.tscn"
+@export_file(".tscn") var next_scene: String = "res://scenes/House.tscn"
 @export var message: String = "Press SPACE to enter."
 
 var is_active: bool = false

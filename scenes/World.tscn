@@ -6,9 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://h0pjed41lu5b" path="res://scenes/Teleport.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://dvq2c55s607ee" path="res://scenes/Cactus.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://bmdeddq4vad76" path="res://scenes/InfoPanel.tscn" id="6"]
-[ext_resource type="PackedScene" uid="uid://bmd8675l1kdou" path="res://scenes/CoinsSmall.tscn" id="7"]
-[ext_resource type="PackedScene" uid="uid://dfbg52xushje0" path="res://scenes/CoinsMedium.tscn" id="8"]
-[ext_resource type="PackedScene" uid="uid://ch0qbnawcqjk0" path="res://scenes/CoinsLarge.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://bmd8675l1kdou" path="res://scenes/Coins.tscn" id="7"]
 
 [node name="World" type="Node2D" unique_id=1393872425]
 texture_filter = 1
@@ -79,23 +77,17 @@ message = "The yellow blobs are coins. You can collect them."
 
 [node name="Coins" type="Node2D" parent="Environment" unique_id=1540039178]
 
-[node name="CoinsSmall" parent="Environment/Coins" unique_id=1248253854 instance=ExtResource("7")]
+[node name="Coins" parent="Environment/Coins" unique_id=1248253854 instance=ExtResource("7")]
 position = Vector2(296, 296)
 
-[node name="CoinsSmall2" parent="Environment/Coins" unique_id=1996594548 instance=ExtResource("7")]
+[node name="Coins2" parent="Environment/Coins" unique_id=1996594548 instance=ExtResource("7")]
 position = Vector2(392, 216)
 
-[node name="CoinsMedium" parent="Environment/Coins" unique_id=1901192062 instance=ExtResource("8")]
+[node name="Coins3" parent="Environment/Coins" unique_id=1563528868 instance=ExtResource("7")]
 position = Vector2(360, 248)
 
-[node name="CoinsMedium2" parent="Environment/Coins" unique_id=1535831243 instance=ExtResource("8")]
+[node name="Coins4" parent="Environment/Coins" unique_id=385395618 instance=ExtResource("7")]
 position = Vector2(280, 200)
-
-[node name="CoinsLarge" parent="Environment/Coins" unique_id=573645340 instance=ExtResource("9")]
-position = Vector2(312, 216)
-
-[node name="CoinsLarge2" parent="Environment/Coins" unique_id=1543323539 instance=ExtResource("9")]
-position = Vector2(200, 344)
 
 [node name="Player" parent="." unique_id=282190446 instance=ExtResource("2")]
 z_index = 20
