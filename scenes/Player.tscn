@@ -21,6 +21,8 @@ shape = SubResource("1")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=256142622]
 target_position = Vector2(0, 16)
+collision_mask = 5
+collide_with_areas = true
 
 [node name="MoveTimer" type="Timer" parent="." unique_id=754085469]
 wait_time = 0.2

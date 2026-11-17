@@ -1,18 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://dv56awnyt3ei5"]
+[gd_scene format=3 uid="uid://dv56awnyt3ei5"]
+
+[ext_resource type="Script" uid="uid://b15s6ib50gu6e" path="res://scripts/hud.gd" id="1_qpvh6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fihxs"]
 bg_color = Color(0.878431, 0.717647, 0, 1)
 
-[node name="HUD" type="CanvasLayer"]
+[node name="HUD" type="CanvasLayer" unique_id=1304423791]
+script = ExtResource("1_qpvh6")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1298326063]
 offset_left = 1080.0
 offset_top = 8.0
 offset_right = 1141.0
 offset_bottom = 34.0
 text = "Coins: 0"
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=598610422]
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 408.0

@@ -8,6 +8,10 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="3-1-TweeningRPG"
@@ -18,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 PlayerState="*res://scripts/PlayerState.gd"
+Hud="*uid://dv56awnyt3ei5"
 
 [display]
 

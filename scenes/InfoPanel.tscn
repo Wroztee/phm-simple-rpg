@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmdeddq4vad76"]
+[gd_scene format=3 uid="uid://bmdeddq4vad76"]
 
 [ext_resource type="Texture2D" uid="uid://cwgsnyy8ditkf" path="res://sprites/pack/roguelikeSheet_transparent.png" id="1"]
-[ext_resource type="Script" path="res://scripts/InfoPanel.gd" id="2"]
+[ext_resource type="Script" uid="uid://dy6k81afk1dax" path="res://scripts/InfoPanel.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://5aychnrs15bo" path="res://sprites/ui/UIbg.png" id="3"]
 [ext_resource type="FontFile" uid="uid://mpe86homv2rs" path="res://fonts/kenvector_future.ttf" id="4"]
 
@@ -13,9 +13,18 @@ radius = 16.0
 
 [sub_resource type="FontFile" id="3"]
 fallbacks = Array[Font]([ExtResource("4")])
-face_index = null
-embolden = null
-transform = null
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -23,38 +32,39 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[node name="InfoPanel" type="StaticBody2D"]
+[node name="InfoPanel" type="StaticBody2D" unique_id=7765922]
 script = ExtResource("2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2062054121]
 shape = SubResource("1")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1780842500]
 texture = ExtResource("1")
 region_enabled = true
 region_rect = Rect2(323, 0, 16, 16)
 
-[node name="CloseArea" type="Area2D" parent="."]
+[node name="CloseArea" type="Area2D" parent="." unique_id=1211789591]
+collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CloseArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CloseArea" unique_id=1225512276]
 shape = SubResource("2")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=687303731]
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=871918771]
 self_modulate = Color(0.760784, 0.662745, 0.623529, 1)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -150.0
-offset_top = 120.0
+offset_top = -160.0
 offset_right = 215.0
-offset_bottom = 266.0
+offset_bottom = -14.0
 grow_horizontal = 2
 texture = ExtResource("3")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/TextureRect"]
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect" unique_id=1011859214]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
